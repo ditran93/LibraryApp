@@ -17,7 +17,8 @@
 	  <servlet-name>LibraryApp</servlet-name>
 	  <url-pattern>/index.jsp</url-pattern>
 	  <url-pattern>/hello.jsp</url-pattern>
-	  <url-pattern>/fine.jsp</url-pattern>
+	  <url-pattern>/menu.jsp</url-pattern>
 	  <url-pattern>/bookslist.jsp</url-pattern>
+	  <url-pattern>/addbook.jsp</url-pattern>
   </servlet-mapping>
 </web-app>

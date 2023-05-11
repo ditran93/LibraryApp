@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>${greetings}</h1>
-	<form action="fine.jsp" method="GET">
+	<form action="menu.jsp" method="GET">
 		<input type="submit" value="Main Menu"/>
 	</form>
 </body>

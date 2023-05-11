@@ -69,7 +69,7 @@ public class Book {
 		ID = iD;
 	}
 	
-	public void Student(int id, String ISBN, String author, String genre, String title) {
+	public void Book(int id, String ISBN, String author, String genre, String title) {
 		setID(id);
 		setISBN(ISBN);
 		setAuthor(author);

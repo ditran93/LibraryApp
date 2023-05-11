@@ -25,17 +25,15 @@ public class BookDAOImpl implements BookDAO {
 
 	@Override
 	public ArrayList<Book> getBooksList() {
-		ArrayList<Book> studentsList = 
-				(ArrayList<Book>)sessionFactory.
-				getCurrentSession().createQuery("FROM Student").
-				list();
-		return studentsList;
+		ArrayList<Book> booksList = 
+				(ArrayList<Book>)sessionFactory.getCurrentSession().createQuery("FROM Book").list();
+		return booksList;
 	}
 
 	@Override
 	public Book getBook(int Id) {
-		Book student = (Book)sessionFactory.getCurrentSession().get(Book.class, Id);
-		return student;
+		Book book = (Book)sessionFactory.getCurrentSession().get(Book.class, Id);
+		return book;
 	}
 
 	@Override

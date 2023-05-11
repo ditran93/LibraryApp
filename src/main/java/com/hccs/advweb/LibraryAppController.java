@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,19 +20,32 @@ public class LibraryAppController {
 	public LibraryAppController() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	@RequestMapping(value = "/menu", method = RequestMethod.GET)
+	public String menuPage(ModelMap model) {
+	    model.addAttribute("menu", "Hi, Welcome to the Library App, Glad to meet you :) !!!!");
+	    return "menu";
+	}
+	@RequestMapping(value="/index", method= RequestMethod.GET)
+	public String welcomeMessaging(ModelMap model) {
+	    model.addAttribute("greetings", "Hi, Welcome to the Library App, Glad to meet you :) !!!!");
+	    return "hello";
+	}
+	
 	@RequestMapping(value="/bookslist", method= RequestMethod.GET)
-	public ModelAndView getStudentsList(ModelAndView model) {
-		ArrayList<Book> studentsList = bookService.getBooksList();
-		model.addObject("studentsList",studentsList);
-		model.setViewName("studentslist");
+	public ModelAndView getBooksList(ModelAndView model) {
+		ArrayList<Book> booksList = bookService.getBooksList();
+		model.addObject("booksList",booksList);
+		model.setViewName("bookslist");
 		return model;
 	}
 
-	@RequestMapping(value="/newspringbook",method=RequestMethod.GET)
-	public ModelAndView newSpringbook(ModelAndView modelView) {
+	@RequestMapping(value="/addbook",method=RequestMethod.GET)
+	public ModelAndView addbook(ModelAndView modelView) {
 		Book book = new Book();
 		modelView.addObject("book",book);
-		modelView.setViewName("addnewbook");
+		modelView.setViewName("addbook");
 		return modelView;
 	}
 	

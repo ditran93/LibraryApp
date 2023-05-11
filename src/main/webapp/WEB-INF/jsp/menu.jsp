@@ -9,16 +9,16 @@
 <body>
 <h1> Welcome to the Library Application Main Menu </h1>
 
-	<h2> ${greetingsFine} </h2>
+	<h2> ${menu} </h2>
 	
 <form action="bookslist.jsp" method="GET">
-	<input type="submit" value="Get Books List "/>
+	<input type="submit" value="Get book list "/>
 </form>
 
-<form action="newspringstudent.jsp" method="get">
-	<input type="submit" value="Add a new Spring Student">
+<form action="addbook.jsp" method="get">
+	<input type="submit" value="Add a new book">
 </form>
 
-<a href="index.jsp"> Thanks a lot </a>
+<a href="index.jsp"> Go back to home page </a>
 </body>
 </html>

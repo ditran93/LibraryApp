@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1> Books List</h1>
-	Id       |     ISBN		|		Author      |     GENRE		|     TITLE		| <br/>
+	ID       |     ISBN		|		AUTHOR     |     GENRE		|     TITLE		| <br/>
 	----------------------------------------------------<br/>
 	
 	<c:forEach var="student" items="${studentsList}">
@@ -20,8 +20,9 @@
 <br/>
 Above should display the list of books in the system...
 
-<form action="newspringstudent.jsp" method="get">
-	<input type="submit" value="Add a new book">
+<form action="addbook.jsp" method="get">
+	<input type="submit" value="Add a new book"><br/>
+	<a href="index.jsp"> Go back to home page </a>
 </form>
 
 </body>
